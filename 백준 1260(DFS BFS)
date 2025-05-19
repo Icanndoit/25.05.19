@@ -29,6 +29,7 @@ void BFS(int v, int n) {  // 시작 정점, 정점의 개수
 		Queue.pop();
 		for (int i = 1; i <= n; i++) {
 			if (graph[v][i] == 1 && BFSvisit[i] == 0)
+				// 간선이 연결되어 있고 and 방문한 적이 없다면
 			{
 				Queue.push(i);
 				BFSvisit[i] = 1;
